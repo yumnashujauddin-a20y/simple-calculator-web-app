@@ -1,0 +1,362 @@
+
+/* =================================
+   1. RESET & GLOBAL STYLES
+================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+
+    background: #eef1f7;
+    color: #172033;
+
+    display: grid;
+    place-items: center;
+
+    transition: 0.2s;
+}
+
+
+/* =================================
+   2. PAGE CONTAINER
+================================= */
+
+.page {
+    width: 100%;
+    padding: 25px;
+}
+
+
+/* =================================
+   3. CALCULATOR BOX
+================================= */
+
+.calculator {
+    width: min(400px, 100%);
+
+    margin: auto;
+
+    background: #fff;
+
+    border: 1px solid #e1e5ed;
+
+    border-radius: 25px;
+
+    padding: 24px;
+
+    box-shadow:
+        0 25px 70px rgba(29, 43, 78, 0.16);
+}
+
+
+/* =================================
+   4. CALCULATOR TOP SECTION
+================================= */
+
+.top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+
+/* Small "WEB APP" text */
+
+.eyebrow {
+    font-size: 0.68rem;
+
+    letter-spacing: 0.12em;
+
+    color: #5c6df2;
+
+    font-weight: 900;
+}
+
+
+/* Calculator heading */
+
+.top h1 {
+    font-size: 1.5rem;
+}
+
+
+/* =================================
+   5. THEME BUTTON
+================================= */
+
+.icon-btn {
+    border: 1px solid #dce1eb;
+
+    background: #f7f8fb;
+
+    border-radius: 10px;
+
+    width: 40px;
+    height: 40px;
+
+    font-size: 1.2rem;
+
+    cursor: pointer;
+}
+
+
+/* =================================
+   6. CALCULATOR DISPLAY
+================================= */
+
+.display {
+    background: #f4f6fa;
+
+    border-radius: 17px;
+
+    padding: 20px;
+
+    min-height: 115px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    text-align: right;
+
+    overflow: hidden;
+}
+
+
+/* Previous calculation */
+
+.history {
+    height: 25px;
+
+    color: #8c95a8;
+
+    font-size: 0.85rem;
+
+    overflow: hidden;
+}
+
+
+/* Current result */
+
+.result {
+    font-size: 2.5rem;
+
+    font-weight: 800;
+
+    overflow-x: auto;
+
+    white-space: nowrap;
+}
+
+
+/* =================================
+   7. CALCULATOR BUTTON GRID
+================================= */
+
+.keys {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+
+/* =================================
+   8. GENERAL BUTTON STYLE
+================================= */
+
+.key {
+    height: 62px;
+
+    border: 1px solid #e1e5ed;
+
+    border-radius: 13px;
+
+    background: #fff;
+
+    color: #172033;
+
+    font-size: 1.15rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* Button hover effect */
+
+.key:hover {
+    background: #f2f4f8;
+}
+
+
+/* =================================
+   9. FUNCTION BUTTONS
+================================= */
+
+.function {
+    background: #f3f5fa;
+}
+
+
+/* =================================
+   10. OPERATOR BUTTONS
+================================= */
+
+.operator {
+    background: #eef0ff;
+
+    color: #5364e9;
+}
+
+
+/* =================================
+   11. EQUALS BUTTON
+================================= */
+
+.equals {
+    background: #5c6df2;
+
+    color: #fff;
+
+    border-color: #5c6df2;
+}
+
+.equals:hover {
+    background: #4f60df;
+}
+
+
+/* =================================
+   12. ZERO BUTTON
+================================= */
+
+.zero {
+    grid-column: span 2;
+}
+
+
+/* =================================
+   13. CALCULATOR TIP
+================================= */
+
+.hint {
+    text-align: center;
+
+    color: #8c95a8;
+
+    font-size: 0.75rem;
+
+    margin-top: 16px;
+}
+
+
+/* =================================
+   14. MOBILE RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 400px) {
+
+    .page {
+        padding: 12px;
+    }
+
+    .calculator {
+        padding: 16px;
+    }
+
+    .key {
+        height: 56px;
+    }
+
+    .result {
+        font-size: 2rem;
+    }
+}
+
+
+/* =================================
+   15. DARK MODE
+================================= */
+
+body.dark {
+    background: #0d1220;
+
+    color: #f2f5ff;
+}
+
+
+/* Calculator in dark mode */
+
+body.dark .calculator {
+    background: #151c2d;
+
+    border-color: #2b3550;
+}
+
+
+/* Display and function buttons */
+
+body.dark .display,
+body.dark .icon-btn,
+body.dark .function {
+    background: #0e1525;
+
+    color: #f2f5ff;
+
+    border-color: #2b3550;
+}
+
+
+/* Normal calculator buttons */
+
+body.dark .key {
+    background: #151c2d;
+
+    color: #f2f5ff;
+
+    border-color: #2b3550;
+}
+
+
+/* Operators in dark mode */
+
+body.dark .operator {
+    background: #20284b;
+
+    color: #9aa7ff;
+}
+
+
+/* History and hint text */
+
+body.dark .history,
+body.dark .hint {
+    color: #8994ac;
+}
+
+
+/* Theme button */
+
+body.dark .icon-btn {
+    color: #f2f5ff;
+}
+

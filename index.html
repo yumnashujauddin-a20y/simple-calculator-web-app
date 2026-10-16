@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes the website responsive on mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="A responsive simple calculator web app.">
+
+    <title>Simple Calculator</title>
+
+    <!-- Connect CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="page">
+
+        <!-- Calculator -->
+        <section class="calculator" aria-label="Calculator">
+
+            <!-- Top section -->
+            <div class="top">
+
+                <div>
+                    <span class="eyebrow">WEB APP</span>
+
+                    <h1>Calculator</h1>
+                </div>
+
+                <!-- Dark/Light mode button -->
+                <button
+                    id="themeBtn"
+                    class="icon-btn"
+                    aria-label="Toggle theme">
+                    ☼
+                </button>
+
+            </div>
+
+
+            <!-- Calculator Display -->
+            <div class="display">
+
+                <!-- Previous calculation -->
+                <div id="history" class="history"></div>
+
+                <!-- Current number -->
+                <div id="display" class="result">
+                    0
+                </div>
+
+            </div>
+
+
+            <!-- Calculator Buttons -->
+            <div class="keys">
+
+                <!-- First row -->
+                <button class="key function" data-action="clear">
+                    AC
+                </button>
+
+                <button class="key function" data-action="delete">
+                    DEL
+                </button>
+
+                <button class="key operator" data-value="%">
+                    %
+                </button>
+
+                <button class="key operator" data-value="/">
+                    ÷
+                </button>
+
+
+                <!-- Second row -->
+                <button class="key" data-value="7">
+                    7
+                </button>
+
+                <button class="key" data-value="8">
+                    8
+                </button>
+
+                <button class="key" data-value="9">
+                    9
+                </button>
+
+                <button class="key operator" data-value="*">
+                    ×
+                </button>
+
+
+                <!-- Third row -->
+                <button class="key" data-value="4">
+                    4
+                </button>
+
+                <button class="key" data-value="5">
+                    5
+                </button>
+
+                <button class="key" data-value="6">
+                    6
+                </button>
+
+                <button class="key operator" data-value="-">
+                    −
+                </button>
+
+
+                <!-- Fourth row -->
+                <button class="key" data-value="1">
+                    1
+                </button>
+
+                <button class="key" data-value="2">
+                    2
+                </button>
+
+                <button class="key" data-value="3">
+                    3
+                </button>
+
+                <button class="key operator" data-value="+">
+                    +
+                </button>
+
+
+                <!-- Fifth row -->
+                <button class="key zero" data-value="0">
+                    0
+                </button>
+
+                <button class="key" data-value=".">
+                    .
+                </button>
+
+                <button class="key equals" data-action="equals">
+                    =
+                </button>
+
+            </div>
+
+
+            <!-- Calculator Tip -->
+            <p class="hint">
+                Tip: You can also use your keyboard.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- Connect JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
